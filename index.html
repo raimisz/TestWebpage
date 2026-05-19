@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MMRoc | Ekskavatora pakalpojumi</title>
+  <style>
+    :root {
+      color-scheme: dark;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(circle at top, #171717 0%, #050505 55%, #000000 100%);
+      color: #f2f2f2;
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+    }
+
+    .vizitkarte {
+      width: min(820px, 100%);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      padding: clamp(1.6rem, 4vw, 3rem);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+      display: grid;
+      gap: 2rem;
+    }
+
+    .logo {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .pakalpojums {
+      margin: 0.5rem 0 0;
+      color: #d4d4d4;
+      font-size: clamp(1rem, 2.3vw, 1.35rem);
+    }
+
+    .kontaktu-bloks {
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    .tel-poga {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      background: #ffffff;
+      color: #050505;
+      text-decoration: none;
+      font-size: clamp(1.25rem, 4vw, 2rem);
+      font-weight: 800;
+      padding: 0.9rem 1.4rem;
+      border-radius: 999px;
+      transition: transform 120ms ease, box-shadow 120ms ease;
+      box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
+    }
+
+    .tel-poga:hover,
+    .tel-poga:focus-visible {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 28px rgba(255, 255, 255, 0.28);
+      outline: none;
+    }
+
+    .kontakt-rinda {
+      margin: 0;
+      color: #cfcfcf;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .kontakt-rinda a {
+      color: #f2f2f2;
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.2em;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #dddddd;
+    }
+
+    ul {
+      margin: 0.65rem 0 0;
+      padding-left: 1.2rem;
+      display: grid;
+      gap: 0.4rem;
+      color: #d9d9d9;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 520px) {
+      body {
+        padding: 1rem;
+      }
+
+      .vizitkarte {
+        border-radius: 18px;
+      }
+
+      .tel-poga {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="vizitkarte" aria-label="MMRoc biznesa vizītkarte">
+    <header>
+      <h1 class="logo" aria-label="MMRoc logo">MMRoc</h1>
+      <p class="pakalpojums">Ekskavatora pakalpojumi</p>
+    </header>
+
+    <section class="kontaktu-bloks" aria-label="Ātrie kontakti">
+      <a class="tel-poga" href="tel:+37126458901">+371 26 458 901</a>
+      <p class="kontakt-rinda"><strong>SIA MMrok (MMRoc)</strong></p>
+      <p class="kontakt-rinda"><a href="https://mmrok.lv" target="_blank" rel="noopener noreferrer">mmrok.lv</a></p>
+      <p class="kontakt-rinda"><a href="mailto:siammrok@gmail.com">siammrok@gmail.com</a></p>
+    </section>
+
+    <section aria-labelledby="tehnika">
+      <h2 id="tehnika">Pieejamā tehnika</h2>
+      <ul>
+        <li>Mazais — bobcat 328, 3.5 tonnas</li>
+        <li>Lielais — cat 325 FLCR, 25 tonnas, 3 kausi (rototilts)</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
