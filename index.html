@@ -37,7 +37,7 @@
         opacity: 0.4;
       }
 
-      .vizitkarte {
+      .business-card {
         width: min(820px, 100%);
         background: linear-gradient(
           180deg,
@@ -47,7 +47,7 @@
         border: 1px solid rgba(255, 255, 255, 0.12);
         border-radius: 24px;
         padding: clamp(1.6rem, 4vw, 3rem);
-        backdrop-filter: blur(6px);
+        backdrop-filter: blur(1px);
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
         display: grid;
         gap: 2rem;
@@ -73,7 +73,7 @@
         display: block;
       }
 
-      .pakalpojums {
+      .service {
         margin: 0.5rem 0 0;
         color: #d4d4d4;
         font-size: clamp(1rem, 2.3vw, 1.35rem);
@@ -87,12 +87,12 @@
         margin: 0;
       }
 
-      .kontaktu-bloks {
+      .contacts-block {
         display: grid;
         gap: 0.9rem;
       }
 
-      .tel-poga {
+      .phone-button {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -110,21 +110,21 @@
         box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
       }
 
-      .tel-poga:hover,
-      .tel-poga:focus-visible {
+      .phone-button:hover,
+      .phone-button:focus-visible {
         transform: translateY(-1px);
         box-shadow: 0 12px 28px rgba(255, 255, 255, 0.28);
         outline: none;
       }
 
-      .kontakt-rinda {
+      .contact-line {
         margin: 0;
         color: #cfcfcf;
         font-size: 1rem;
         line-height: 1.6;
       }
 
-      .kontakt-rinda a {
+      .contact-line a {
         color: #f2f2f2;
         text-decoration-thickness: 0.08em;
         text-underline-offset: 0.2em;
@@ -152,11 +152,11 @@
           padding: 1rem;
         }
 
-        .vizitkarte {
+        .business-card {
           border-radius: 18px;
         }
 
-        .tel-poga {
+        .phone-button {
           width: 100%;
         }
       }
@@ -167,25 +167,19 @@
       <source src="assets/video/mmrok.mp4" type="video/mp4" />
     </video>
 
-    <main class="vizitkarte" aria-label="MMRoc biznesa vizītkarte">
+    <main class="business-card" aria-label="MMRoc biznesa vizītkarte">
       <h1 class="logo" aria-label="MMRoc logo">
         <img src="assets/img/logo.png" alt="MMRoc" />
       </h1>
 
       <header>
-        <h2>MMRoc</h2>
-        <p class="pakalpojums">Ekskavatora pakalpojumi</p>
+        <h2>SIA MMrok</h2>
+        <p class="service">Ekskavatora pakalpojumi</p>
       </header>
 
-      <section class="kontaktu-bloks" aria-label="Ātrie kontakti">
-        <a class="tel-poga" href="tel:+37124602860">+371 24 602 860</a>
-        <p class="kontakt-rinda"><strong>SIA MMrok</strong></p>
-        <p class="kontakt-rinda">
-          <a href="https://mmrok.lv" target="_blank" rel="noopener noreferrer">
-            mmrok.lv
-          </a>
-        </p>
-        <p class="kontakt-rinda">
+      <section class="contacts-block" aria-label="Ātrie kontakti">
+        <a class="phone-button" href="tel:+37124602860">+371 24 602 860</a>
+        <p class="contact-line">
           <a
             href="mailto:siammrok@gmail.com?subject=Par ekskavatora pakalpojumiem"
           >
@@ -194,8 +188,8 @@
         </p>
       </section>
 
-      <section aria-labelledby="tehnika">
-        <h2 id="tehnika">Pieejamā tehnika</h2>
+      <section aria-labelledby="equipment">
+        <h2 id="equipment">Pieejamā tehnika</h2>
         <ul>
           <li>Mazais — bobcat 328, 3.5 tonnas</li>
           <li>Lielais — cat 325 FLCR, 25 tonnas, 3 kausi (rototilts)</li>
