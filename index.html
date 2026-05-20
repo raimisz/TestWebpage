@@ -17,16 +17,24 @@
         margin: 0;
         min-height: 100vh;
         font-family: "Inter", "Segoe UI", Roboto, sans-serif;
-        background: radial-gradient(
-          circle at top,
-          #171717 0%,
-          #050505 55%,
-          #000000 100%
-        );
+        background: #000000;
         color: #f2f2f2;
         display: grid;
         place-items: center;
         padding: 2rem;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      .video-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        opacity: 0.4;
       }
 
       .vizitkarte {
@@ -43,20 +51,40 @@
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
         display: grid;
         gap: 2rem;
+        position: relative;
       }
 
       .logo {
-        font-size: clamp(2rem, 5vw, 3rem);
-        font-weight: 800;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
+        position: absolute;
+        top: clamp(1.6rem, 4vw, 3rem);
+        right: clamp(1.6rem, 4vw, 3rem);
         margin: 0;
+        background: rgba(255, 255, 255, 0.95);
+        padding: clamp(0.6rem, 1.5vw, 1rem);
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        display: flex;
+        align-items: center;
+      }
+
+      .logo img {
+        height: clamp(2rem, 6vw, 5rem);
+        width: auto;
+        display: block;
       }
 
       .pakalpojums {
         margin: 0.5rem 0 0;
         color: #d4d4d4;
         font-size: clamp(1rem, 2.3vw, 1.35rem);
+      }
+
+      header h2 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin: 0;
       }
 
       .kontaktu-bloks {
@@ -102,7 +130,7 @@
         text-underline-offset: 0.2em;
       }
 
-      h2 {
+      section h2 {
         margin: 0;
         font-size: 1.05rem;
         text-transform: uppercase;
@@ -135,9 +163,17 @@
     </style>
   </head>
   <body>
+    <video class="video-background" autoplay loop muted playsinline>
+      <source src="assets/video/mmrok.mp4" type="video/mp4" />
+    </video>
+
     <main class="vizitkarte" aria-label="MMRoc biznesa vizītkarte">
+      <h1 class="logo" aria-label="MMRoc logo">
+        <img src="assets/img/logo.png" alt="MMRoc" />
+      </h1>
+
       <header>
-        <h1 class="logo" aria-label="MMRoc logo">MMRoc</h1>
+        <h2>MMRoc</h2>
         <p class="pakalpojums">Ekskavatora pakalpojumi</p>
       </header>
 
