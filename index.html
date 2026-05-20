@@ -64,16 +64,14 @@
         top: clamp(1.6rem, 4vw, 3rem);
         right: clamp(1.6rem, 4vw, 3rem);
         margin: 0;
-        background: rgba(255, 255, 255, 0.95);
         padding: clamp(0.6rem, 1.5vw, 1rem);
         border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         display: flex;
         align-items: center;
       }
 
       .logo img {
-        height: clamp(2rem, 6vw, 5rem);
+        height: clamp(4rem, 10vw, 20rem);
         width: auto;
         display: block;
       }
@@ -152,6 +150,26 @@
         line-height: 1.5;
       }
 
+      .company-details {
+        margin: 0.65rem 0 0;
+        display: grid;
+        gap: 0.3rem;
+        color: #d9d9d9;
+        line-height: 1.6;
+        font-size: 0.95rem;
+      }
+
+      .detail-line {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0.8rem;
+      }
+
+      .detail-label {
+        color: #b8b8b8;
+        font-weight: 500;
+      }
+
       @media (max-width: 520px) {
         body {
           padding: 1rem;
@@ -174,7 +192,7 @@
 
     <main class="business-card" aria-label="MMRoc biznesa vizītkarte">
       <h1 class="logo" aria-label="MMRoc logo">
-        <img src="assets/img/logo.png" alt="MMRoc" />
+        <img src="assets/img/logo-white.png" alt="MMRoc" />
       </h1>
 
       <header>
@@ -199,6 +217,28 @@
           <li>bobcat 328, 3.5 tonnas</li>
           <li>cat 325 FLCR, 25 tonnas, 3 kausi (rototilts)</li>
         </ul>
+      </section>
+
+      <section aria-labelledby="company-info">
+        <h2 id="company-info">Rekvizīti</h2>
+        <div class="company-details">
+          <div class="detail-line">
+            <span class="detail-label">Nosaukums:</span>
+            <span>SIA MMrok</span>
+          </div>
+          <div class="detail-line">
+            <span class="detail-label">Reģ. Nr.:</span>
+            <span>LV40203729327</span>
+          </div>
+          <div class="detail-line">
+            <span class="detail-label">Bankas konts:</span>
+            <span>SEB LV09UNLA0055005906073</span>
+          </div>
+          <div class="detail-line">
+            <span class="detail-label">Adrese:</span>
+            <span>Cēsu nov., Skujenes pag., "Kalna Sīļi", LV-4143</span>
+          </div>
+        </div>
       </section>
     </main>
   </body>
